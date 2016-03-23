@@ -1,12 +1,16 @@
 grocery_list = ["strawberries", "milk" , "chicken", "salmon", "rice"]
 
-grocery_list.each {|e| puts "* #{e}"}
+grocery_list.each {|item| puts "* #{item}"}
 
 def add(the_list)
-  puts "any items you wish to add to your list?"
+  puts "any items you wish to add to your list? if your list is correct type nothing"
   item=gets.chomp
-    g2=the_list.push(item)
-    puts g2
+      if item == "nothing"
+      puts "you did not add anything"
+        else
+          g2=the_list.push(item)
+          puts g2
+      end
   end
 
 def list(l)
@@ -27,7 +31,7 @@ list(grocery_list)
 
 sorted_list= grocery_list.sort
 
-sorted_list.each {|e| puts "* #{e}"}
+sorted_list.each {|item| puts "* #{item}"}
 
 grocery_list.delete_at(3)
 
