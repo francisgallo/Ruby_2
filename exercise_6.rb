@@ -1,4 +1,4 @@
-grocery_list = ["Strawberries", "milk" , "Chicken", "apple", "rice"]
+grocery_list = ["strawberries", "milk" , "chicken", "salmon", "rice"]
 
 grocery_list.each {|e| puts "* #{e}"}
 
@@ -25,5 +25,6 @@ list(grocery_list)
 
  puts grocery_list[1]
 
-sort=grocery_list.sort
-sort.each {|e| puts "* #{e}"}
+sorted_list= grocery_list.sort
+
+sorted_list.each {|e| puts "* #{e}"}
