@@ -4,8 +4,31 @@ students = {
   :cohort3 => 22
 }
 
-students.each do |name,var|
-  puts " #{name}:  #{var} students"
+def show(var)
+  var.each do |name,size|
+  puts " #{name}:  #{size} students"
+  end
 end
 
-students[:cohort4] =43
+show(students)
+
+students[:cohort4] = 43
+
+
+puts students.keys
+
+students.each do |name,size|
+  students[name] = (size*1.05).round
+end
+
+show(students)
+
+
+students.delete(:cohort2)
+puts students
+
+num_students = students.values
+
+
+s = num_students.inject(0) {|sum , values| sum + values}
+puts "your total number of students are #{s}"
