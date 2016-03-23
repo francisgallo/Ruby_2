@@ -31,4 +31,6 @@ sorted_list.each {|e| puts "* #{e}"}
 
 grocery_list.delete_at(3)
 
-puts grocery_list
+sorted_list=grocery_list.sort
+
+puts sorted_list
